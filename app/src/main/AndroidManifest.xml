@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="madiniservices.go.ke">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".MadiniApplication"
         android:allowBackup="true"

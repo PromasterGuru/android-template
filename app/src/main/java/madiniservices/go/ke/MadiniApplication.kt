@@ -2,7 +2,6 @@ package madiniservices.go.ke
 
 import android.app.Application
 import android.util.Log
-import org.koin.android.BuildConfig
 import timber.log.Timber
 
 /**
@@ -29,9 +28,9 @@ class MadiniApplication : Application() {
 }
 
 class ReleaseTree : @org.jetbrains.annotations.NotNull Timber.Tree() {
-    override fun log(priority: Int, tag: String?, message: String, throwable: Throwable?) {
+    override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
         if (priority == Log.ERROR || priority == Log.WARN) {
-            // throwable?.let { Sentry.captureException(it) } TODO: Uncomment when sentry is configured for madini project
+            // t?.let { Sentry.captureException(it) } TODO: Uncomment when sentry is configured for madini project
         }
     }
 }

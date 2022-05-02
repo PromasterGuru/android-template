@@ -23,6 +23,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -50,9 +57,9 @@ dependencies {
     kapt("androidx.room:room-compiler:$rootProject.roomVersion")
 
     //LifeCycle
-    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion")
 
     //Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
@@ -82,9 +89,9 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-compose:$rootProject.koinVersion"
 
     //Sentry
-    implementation 'io.sentry:sentry-android:5.1.2'
+    implementation 'io.sentry:sentry-android:6.0.0-beta.2'
 
-    // Testing dependencies
+    //Testing dependencies
     testImplementation "junit:junit:$rootProject.jUnitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.extJUnitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
