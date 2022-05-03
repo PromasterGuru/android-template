@@ -1,11 +1,11 @@
-package madiniservices.go.ke.data.prefs
+package protemplate.data.prefs
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
 import com.google.gson.Gson
-import madiniservices.go.ke.util.AppConstants.ENCRYPTED_APP_PREFS
+import protemplate.util.AppConstants.ENCRYPTED_APP_PREFS
 
 
 /**

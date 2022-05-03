@@ -1,9 +1,9 @@
-package madiniservices.go.ke
+package protemplate
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import madiniservices.go.ke.databinding.ActivityMainBinding
+import protemplate.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

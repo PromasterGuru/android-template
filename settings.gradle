@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "madini_android_compliance"
+rootProject.name = "android-template"
 include ':app'

@@ -1,19 +1,19 @@
-package madiniservices.go.ke
+package protemplate
 
 import android.app.Application
 import android.util.Log
-import madiniservices.go.ke.data.prefs.AppPreferences
-import madiniservices.go.ke.di.KoinModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
+import protemplate.data.prefs.AppPreferences
+import protemplate.di.KoinModules
 import timber.log.Timber
 
 /**
  * Created by promasterguru on 02/05/2022.
  */
-class MadiniApplication : Application() {
+class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         AppPreferences.initializeInstance(applicationContext)
@@ -33,7 +33,7 @@ class MadiniApplication : Application() {
         }
         startKoin {
             androidLogger(if (BuildConfig.DEBUG) Level.DEBUG else Level.NONE)
-            androidContext(this@MadiniApplication)
+            androidContext(this@MainApplication)
             modules(
                 listOf(
                     KoinModules.prefModule,

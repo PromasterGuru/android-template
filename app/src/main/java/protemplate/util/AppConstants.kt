@@ -1,6 +1,6 @@
-package madiniservices.go.ke.util
+package protemplate.util
 
-import madiniservices.go.ke.BuildConfig
+import protemplate.BuildConfig
 
 /**
  * Created by promasterguru on 03/05/2022.

@@ -1,15 +1,15 @@
-package madiniservices.go.ke.di
+package protemplate.di
 
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import madiniservices.go.ke.BuildConfig
-import madiniservices.go.ke.data.prefs.AppPreferences
-import madiniservices.go.ke.data.remote.BaseApiService
-import madiniservices.go.ke.util.AppConstants.KEY_ACCESS_TOKEN
+import protemplate.data.prefs.AppPreferences
+import protemplate.data.remote.BaseApiService
+import protemplate.util.AppConstants.KEY_ACCESS_TOKEN
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.BuildConfig
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

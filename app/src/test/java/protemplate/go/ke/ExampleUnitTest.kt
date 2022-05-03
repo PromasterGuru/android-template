@@ -1,4 +1,4 @@
-package madiniservices.go.ke
+package protemplate.go.ke
 
 import org.junit.Test
 

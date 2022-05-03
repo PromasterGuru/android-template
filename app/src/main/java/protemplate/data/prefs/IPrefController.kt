@@ -1,4 +1,4 @@
-package madiniservices.go.ke.data.prefs
+package protemplate.data.prefs
 
 /**
  * Created by promasterguru on 03/05/2022.
