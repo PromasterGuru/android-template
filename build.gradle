@@ -21,6 +21,7 @@ buildscript {
         navVersion = "2.4.2"
         sentryVersion = "6.0.0-beta.2"
         securityCryptoVersion = "1.0.0"
+        splashScreenVersion = "1.0.0-beta01"
 
         //Test dependency versions
         jUnitVersion = "4.13.2"

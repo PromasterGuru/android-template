@@ -94,6 +94,9 @@ dependencies {
     //Security Crypto
     implementation "androidx.security:security-crypto:$rootProject.securityCryptoVersion"
 
+    //Splash Screen
+    implementation "androidx.core:core-splashscreen:$rootProject.splashScreenVersion"
+
     //Testing dependencies
     testImplementation "junit:junit:$rootProject.jUnitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.extJUnitVersion"
