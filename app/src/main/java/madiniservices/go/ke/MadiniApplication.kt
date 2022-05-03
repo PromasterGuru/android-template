@@ -2,6 +2,12 @@ package madiniservices.go.ke
 
 import android.app.Application
 import android.util.Log
+import madiniservices.go.ke.data.prefs.AppPreferences
+import madiniservices.go.ke.di.KoinModules
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 import timber.log.Timber
 
 /**
@@ -10,6 +16,7 @@ import timber.log.Timber
 class MadiniApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+        AppPreferences.initializeInstance(applicationContext)
         if (BuildConfig.DEBUG) {
             Timber.plant(object : Timber.DebugTree() {
                 override fun createStackElementTag(element: StackTraceElement): String? {
@@ -23,6 +30,17 @@ class MadiniApplication : Application() {
             })
         } else {
             Timber.plant(ReleaseTree())
+        }
+        startKoin {
+            androidLogger(if (BuildConfig.DEBUG) Level.DEBUG else Level.NONE)
+            androidContext(this@MadiniApplication)
+            modules(
+                listOf(
+                    KoinModules.prefModule,
+                    KoinModules.retrofitModule,
+                    KoinModules.apiModule
+                )
+            )
         }
     }
 }

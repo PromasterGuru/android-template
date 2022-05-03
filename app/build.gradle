@@ -89,7 +89,10 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-compose:$rootProject.koinVersion"
 
     //Sentry
-    implementation 'io.sentry:sentry-android:6.0.0-beta.2'
+    implementation "io.sentry:sentry-android:$rootProject.sentryVersion"
+
+    //Security Crypto
+    implementation "androidx.security:security-crypto:$rootProject.securityCryptoVersion"
 
     //Testing dependencies
     testImplementation "junit:junit:$rootProject.jUnitVersion"

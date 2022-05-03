@@ -1,7 +1,7 @@
 buildscript {
     ext {
         compileSdkVersion = 32
-        minSdkVersion = 21
+        minSdkVersion = 23
         targetSdkVersion = 32
         applicationVersion = "7.1.2"
         kotlinVersion = "1.6.20-M1"
@@ -19,6 +19,8 @@ buildscript {
         koinVersion = "3.2.0-beta-1"
         timberVersion = "5.0.1"
         navVersion = "2.4.2"
+        sentryVersion = "6.0.0-beta.2"
+        securityCryptoVersion = "1.0.0"
 
         //Test dependency versions
         jUnitVersion = "4.13.2"
